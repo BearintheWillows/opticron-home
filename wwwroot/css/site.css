@@ -19,3 +19,46 @@ html {
 body {
   margin-bottom: 60px;
 }
+
+.orbit-container-wrapper {
+  position: relative;
+}
+
+
+.orbit-bullets {
+  position: absolute;
+  padding: 0.2rem;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(15rem);
+  z-index: 1;
+  font-size: 3rem;
+
+}
+
+.orbit-bullets button {
+  background: white;
+  width: 0.7rem;
+  height: 0.7rem;
+  
+  cursor: pointer;
+}
+
+.orbit-bullets button.is-active {
+  
+  background: #258cfb;
+}
+
+.orbit-bullets button:hover {
+  background: #258cfb;
+}
+
+header{
+  width: 1280px; 
+  margin: 0 auto;
+}
+
+.orbit {
+ width: 100%; 
+  background-color: yellow;
+}
