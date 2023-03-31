@@ -27,10 +27,10 @@ body {
 
 .orbit-bullets {
   position: absolute;
-  padding: 0.2rem;
+  padding: 0.15rem;
   bottom: 0;
   left: 50%;
-  transform: translateX(15rem);
+  transform: translateX(21.50rem);
   z-index: 1;
   font-size: 3rem;
 
@@ -61,4 +61,13 @@ header{
 .orbit {
  width: 100%; 
   background-color: yellow;
+    height: 350px;
+}
+
+.orbit img{
+  width: 100%;
+  image-resolution: inherit;
+height: 350px;
+  
+  
 }
