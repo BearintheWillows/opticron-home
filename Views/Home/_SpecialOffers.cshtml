@@ -1,14 +1,20 @@
-﻿@model Content
+﻿@model List<SpecialOffers>
 
-@foreach( var item in Model.SpecialOffersList )
-{
-    <div class="media-object">
-        <div class="media-object-section">
-            <img src="@item.ImagePath" alt="@item.ImageAlt">
-        </div>
-        <div class="media-object-section">
-            <p>@item.ItemTitle</p>
-            <p>@item.Text</p>
-        </div>
-    </div>
-}
+<section class="special-offers" style="background-color: #e6e7e8;">
+
+    <h2 class="text-center">Special Offers</h2>
+    <ul class="grid-x grid-padding-x text-center large-up-3 special-offer-item-container">
+        @foreach ( var item in Model )
+        {
+            <li class="cell text-center special-offer-item">
+                <div>
+                    <img src="@item.ImagePath" alt="@item.ImageAlt">
+                </div>
+                <div class="expanded special-offer-text">
+                    <p class="text-title">@item.ItemTitle</p>
+                    <p class="text-offer">@item.Text</p>
+                </div>
+            </li>
+        }
+    </ul>
+</section>

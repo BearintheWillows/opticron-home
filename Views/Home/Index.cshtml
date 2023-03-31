@@ -5,9 +5,10 @@
 }
 
 
-@Html.Partial( "_Orbit" )
-<section class="mainContent grid-container">
-@Html.Partial( "_MediaObjects", Model.MediaObjectsList )
-@* @Html.Partial( "_SpecialOffers" ) *@
+
+@await Html.PartialAsync( "_Orbit" )
+<section class="mainContent grid-container" style="background-color: white">
+    @await Html.PartialAsync( "_MediaObjects", Model.MediaObjectsList )
+    @await Html.PartialAsync( "_SpecialOffers", Model.SpecialOffersList)
 @* @Html.Partial( "_ProductCategories", Model.ProductCategoriesList ) *@
 </section>
