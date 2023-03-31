@@ -4,6 +4,10 @@
     ViewData["Title"] = "Home Page";
 }
 
+
 @Html.Partial( "_Orbit" )
-@Html.Partial( "_MediaObjects" )
-@Html.Partial( "_SpecialOffers" )
+<section class="mainContent grid-container">
+@Html.Partial( "_MediaObjects", Model.MediaObjectsList )
+@* @Html.Partial( "_SpecialOffers" ) *@
+@* @Html.Partial( "_ProductCategories", Model.ProductCategoriesList ) *@
+</section>

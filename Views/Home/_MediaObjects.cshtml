@@ -1,8 +1,9 @@
-﻿@model Content
+﻿@model List<MediaObjects>
 
-@foreach(var item in Model.MediaObjectsList)
+<section class="">
+@foreach(var item in Model)
 {
-    <div class="media-object">
+    <div class="cell small-3">
         <div class="media-object-section">
             <h4>@item.Title</h4>
         </div>
@@ -17,3 +18,4 @@
         </div>
     </div>
 }
+</section>

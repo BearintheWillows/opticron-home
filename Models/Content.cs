@@ -6,4 +6,6 @@ public class Content
 {
 	public List<MediaObjects> MediaObjectsList { get; set; }
 	public List<SpecialOffers> SpecialOffersList { get; set; }
+	
+	public List<ProductCategories> ProductCategoriesList { get; set; }
 }

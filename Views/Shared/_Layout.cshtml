@@ -4,22 +4,24 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - optricon_home</title>
-    
-   
     <link rel="stylesheet" href="~/css/foundation.min.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/optricon_home.styles.css" asp-append-version="true" />
      <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
-<body>
-<header>
-    <div class="title-bar">
+<body >
+<header >
+    <div class="title-bar" style="background-color: #e6e7e8">
         <div class="title-var-left">
-            Opticron
+            <img src="/images/Web_Title.png" alt="Web Title">
         </div>
     </div>
-    <div class="top-bar">
-        <div class="top-bar-left">
-            <ul style="display: flex; flex-direction: row">
+    <div class="top-bar" >
+        <div class="top-bar-left grid-margin-x ">
+            <ul class="cell small-6 " style="
+            display: flex; 
+            flex-direction: row; 
+            list-style-type: none;
+            justify-content: space-between" >
                 <li>Our Products</li>
                 <li>Where to Buy</li>
                 <li>News & Reviews</li>
@@ -27,10 +29,11 @@
                 <li>My Opticron</li>
             </ul>
         </div>
+        <div style="width: 15rem"></div>
         <div class="top-bar-right">
-            <ul class="menu">
-              <li><input type="search" placeholder="My Opticron..."></li>
-              <li><button type="button" class="button"><i class="fa-solid fa-magnifying-glass"></i></button></li>
+            <ul style="display: flex; flex-direction: row; list-style-type: none ">
+              <li><input style="margin-right: 0;" type="search" placeholder="My Opticron..."></li>
+              <li><button style="padding: 0.7rem; background-color: #929497" type="button" class="button"><i class="fa-solid fa-magnifying-glass"></i></button></li>
             </ul>
           </div>
 

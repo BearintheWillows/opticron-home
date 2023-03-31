@@ -23,8 +23,9 @@ public class ContentService : IContentService
 	{
 		List<MediaObjects> mediaObjects = await _context.MediaObjects.ToListAsync();
 		List<SpecialOffers> specialOffers = await _context.SpecialOffers.ToListAsync();
+		List<ProductCategories> productCategories = await _context.ProductCategories.ToListAsync();
 
-		var content = new Content() { MediaObjectsList = mediaObjects, SpecialOffersList = specialOffers};
+		var content = new Content() { MediaObjectsList = mediaObjects, SpecialOffersList = specialOffers, ProductCategoriesList = productCategories};
 		
 		return content;
 	}

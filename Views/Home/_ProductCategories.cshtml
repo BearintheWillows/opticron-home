@@ -1,0 +1,13 @@
+﻿@model List<ProductCategories>
+
+@foreach ( var item in Model )
+{
+    <div class="media-object grid-x">
+        <div class="media-object-section">
+            <img src="@item.ImagePath" alt="@item.ImageAlt">
+        </div>
+        <div class="media-object-section">
+        <p>@item.CategoryTitle</p>
+    </div>
+    </div>
+}

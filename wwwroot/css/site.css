@@ -18,19 +18,31 @@ html {
 }
 body {
   margin-bottom: 60px;
+  background-color: #e6e7e8;
 }
 
-.orbit-container-wrapper {
+/* Header Styles */
+
+
+
+.titleBar ul {
+  text-decoration: none;
+}
+
+/* Orbit Styles */
+
+.orbit-container {
   position: relative;
+    width: 100%;
 }
 
 
 .orbit-bullets {
   position: absolute;
-  padding: 0.15rem;
+  padding: 0.30rem;
   bottom: 0;
   left: 50%;
-  transform: translateX(21.50rem);
+  transform: translateX(28rem);
   z-index: 1;
   font-size: 3rem;
 
@@ -38,8 +50,8 @@ body {
 
 .orbit-bullets button {
   background: white;
-  width: 0.7rem;
-  height: 0.7rem;
+  width: 0.9rem;
+  height: 0.9rem;
   
   cursor: pointer;
 }
@@ -59,15 +71,27 @@ header{
 }
 
 .orbit {
- width: 100%; 
-  background-color: yellow;
+ width: 100%;
     height: 350px;
+  padding-bottom: 3rem;
 }
 
 .orbit img{
   width: 100%;
   image-resolution: inherit;
 height: 350px;
-  
-  
 }
+
+/* Main Section */
+
+.mainContent{
+  width: 1280px;
+}
+
+/* Media Objects */
+
+.media-objects.container{
+  display: flex;
+  flex-direction: row ;
+}
+
