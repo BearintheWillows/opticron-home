@@ -9,10 +9,12 @@ using System.Text.Encodings.Web;
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly IContentService _contentService;
 
-    public HomeController( ILogger<HomeController> logger )
+    public HomeController( ILogger<HomeController> logger, IContentService contentService )
     {
         _logger = logger;
+        _contentService = contentService;
     }
 
     public IActionResult Index()
