@@ -75,6 +75,36 @@ public static class ModelBuilderExtentions
 			                      Text = "Save 25%"
 			                      }
 		             );
+		modelBuilder.Entity<ProductCategories>()
+		            .HasData( new
+			                      {
+			                      Id = 1,
+			                      ImagePath = "/images/Binocula_1.png",
+			                      ImageAlt = "Binocula 1",
+			                      CategoryTitle = "Binoculars",
+			                      },
+		                      new
+			                      {
+			                      Id = 2,
+			                      ImagePath = "/images/Binocula_2.png",
+			                      ImageAlt = "Binocula 2",
+			                      CategoryTitle = "Compact Binoculars",
+			                      },
+		                      new
+			                      {
+			                      Id = 3,
+			                      ImagePath = "/images/Binocula_3.png",
+			                      ImageAlt = "Binocula 3",
+			                      CategoryTitle = "Telescopes & Eyepieces",
+			                      },
+		                      new
+			                      {
+			                      Id = 4,
+			                      ImagePath = "/images/Binocula_4.png",
+			                      ImageAlt = "Binocula 4",
+			                      CategoryTitle = "Observation & Marine",
+			                      }
+		             );
+	}
 
 	}
-}

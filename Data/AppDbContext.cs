@@ -12,6 +12,8 @@ public class AppDbContext : DbContext
 
 	public DbSet<MediaObjects> MediaObjects { get; set; }
 	public DbSet<SpecialOffers> SpecialOffers { get; set; }
+	
+	public DbSet<ProductCategories> ProductCategories { get; set; }
 
 	protected override void OnModelCreating( ModelBuilder modelBuilder )
 	{
