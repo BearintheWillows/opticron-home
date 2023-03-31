@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
-using optricon_home;
+
 using optricon_home.Data;
+using optricon_home.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 

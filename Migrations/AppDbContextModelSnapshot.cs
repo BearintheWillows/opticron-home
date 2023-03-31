@@ -26,6 +26,10 @@ namespace optricon_home.Migrations
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
 
+                    b.Property<string>("SectionName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Text")
                         .IsRequired()
                         .HasMaxLength(200)
@@ -34,6 +38,14 @@ namespace optricon_home.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Content");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = "1",
+                            SectionName = "section1-headings",
+                            Text = "Heading 1"
+                        });
                 });
 #pragma warning restore 612, 618
         }

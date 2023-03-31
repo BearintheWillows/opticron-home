@@ -10,4 +10,6 @@ public class Content
 	[Required]
 	[MaxLength( 200 )]
 	public string Text { get; set; }
+	[Required]
+	public string SectionName { get; set; }
 }
