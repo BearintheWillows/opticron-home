@@ -1,0 +1,14 @@
+﻿@model Content
+
+@foreach( var item in Model.SpecialOffersList )
+{
+    <div class="media-object">
+        <div class="media-object-section">
+            <img src="@item.ImagePath" alt="@item.ImageAlt">
+        </div>
+        <div class="media-object-section">
+            <p>@item.ItemTitle</p>
+            <p>@item.Text</p>
+        </div>
+    </div>
+}

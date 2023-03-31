@@ -3,8 +3,7 @@ using optricon_home.Models;
 using System.Diagnostics;
 
 namespace optricon_home.Controllers;
-
-using System.Text.Encodings.Web;
+using Services;
 
 public class HomeController : Controller
 {
@@ -17,20 +16,14 @@ public class HomeController : Controller
         _contentService = contentService;
     }
 
-    public IActionResult Index()
+    public async Task<IActionResult> Index()
     {
-        // List<string> orbitViewModel = null;
-        // orbitViewModel.Add("<img src='images/Screenshot 2023-03-30 125113.png'` alt=''>");
-        //
-        return View();
+        var content = await _contentService.GetContentAsync();
+        return await Task.Run( () => View( content ) );
+
     }
 
-    public IActionResult Edit(string name = "World", int ID = 1)
-    {
-        ViewData["Message"] = "Your application description page.";
-        ViewData["ID"] = ID;
-        return View();
-    }
+   
 
     [ResponseCache( Duration = 0, Location = ResponseCacheLocation.None, NoStore = true )]
     public IActionResult Error()

@@ -10,8 +10,9 @@ public class AppDbContext : DbContext
 	{
 	}
 
-	public DbSet<Content> Content { get; set; }
-	
+	public DbSet<MediaObjects> MediaObjects { get; set; }
+	public DbSet<SpecialOffers> SpecialOffers { get; set; }
+
 	protected override void OnModelCreating( ModelBuilder modelBuilder )
 	{
 		modelBuilder.Seed();

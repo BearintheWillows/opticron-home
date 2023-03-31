@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using optricon_home.Data;
 
@@ -10,9 +11,11 @@ using optricon_home.Data;
 namespace optricon_home.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230331111333_RemovedContentAddedMediaObjects")]
+    partial class RemovedContentAddedMediaObjects
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -59,7 +62,7 @@ namespace optricon_home.Migrations
                             Id = 1,
                             ButtonText = "New Products",
                             ImageAlt = "Bird catching fish from River",
-                            ImagePath = "/images/Bird.png",
+                            ImagePath = "/images/Birds.png",
                             Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
                             Title = "New Products"
                         },
@@ -89,61 +92,6 @@ namespace optricon_home.Migrations
                             ImagePath = "/images/Bird.png",
                             Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",
                             Title = "Gallery"
-                        });
-                });
-
-            modelBuilder.Entity("optricon_home.Models.SpecialOffers", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
-
-                    b.Property<string>("ImageAlt")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImagePath")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ItemTitle")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Text")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.HasKey("Id");
-
-                    b.ToTable("SpecialOffers");
-
-                    b.HasData(
-                        new
-                        {
-                            Id = 1,
-                            ImageAlt = "Money",
-                            ImagePath = "/images/Money.png",
-                            ItemTitle = "Discovery WP PC",
-                            Text = "£20 Cashback"
-                        },
-                        new
-                        {
-                            Id = 2,
-                            ImageAlt = "Olympus Camera",
-                            ImagePath = "/images/Olympus.png",
-                            ItemTitle = "HR ED Fieldscopes",
-                            Text = "Free Digiscoping Kit"
-                        },
-                        new
-                        {
-                            Id = 3,
-                            ImageAlt = "Otricon Camera",
-                            ImagePath = "/images/Otricon_Cam.png",
-                            ItemTitle = "IS 60 WP FieldScope Kits",
-                            Text = "Save 25%"
                         });
                 });
 #pragma warning restore 612, 618

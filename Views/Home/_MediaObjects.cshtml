@@ -1,0 +1,19 @@
+﻿@model Content
+
+@foreach(var item in Model.MediaObjectsList)
+{
+    <div class="media-object">
+        <div class="media-object-section">
+            <h4>@item.Title</h4>
+        </div>
+        <div class="media-object-section">
+            <img src="@item.ImagePath" alt="@item.ImageAlt">
+        </div>
+        <div class="media-object-section">
+            @item.Text
+        </div>
+        <div class="media-object-section">
+            <button class="button">@item.ButtonText</button>
+        </div>
+    </div>
+}
