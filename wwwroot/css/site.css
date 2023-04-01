@@ -1,5 +1,6 @@
 html {
   font-size: 14px;
+  background-color: #bbbdbf;
 }
 
 @media (min-width: 768px) {
@@ -17,7 +18,6 @@ html {
   min-height: 100%;
 }
 body {
-  margin-bottom: 60px;
   background-color: #e6e7e8;
 }
 
@@ -206,4 +206,69 @@ height: 350px;
   left: 0.2rem;
   width: 100%;
   
+}
+
+/* Footer */
+
+footer{
+  height: 15rem;
+  background-color: #bbbdbf;
+}
+
+footer .footer-content-container{
+ padding: 3.5rem 21rem;
+  height: 100%;
+  
+}
+
+.footer-content-container .footer-content-left{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.footer-content-container .footer-content-left a,p{
+  color: #eaebeb;
+}
+
+.footer-content-container .footer-content-left a{
+  font-size: 0.7rem;
+}
+
+.footer-content-container .footer-content-right{
+  display: flex;
+    flex-direction: column;
+  align-items: flex-end;
+  padding-right: 10rem;
+}
+
+.footer-content-container .footer-content-right .footer-email{
+  letter-spacing: 0.25rem;
+}
+
+.footer-content-container .footer-content-right-top .footer-number{
+  height: 3rem;
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: #ffffff;
+}
+
+.footer-content-container .footer-content-right-bottom {
+     display: flex;
+     flex-direction: row;
+  font-size: 2.4rem;
+  letter-spacing: 1.1rem;
+  color: #edeeee;
+}
+
+.footer-content-container .footer-content-right-bottom .footer-icons{
+  font-size: 1.5rem;
+  padding: 0.9rem 0.2rem;
+    color: #ffffff;
+}
+
+.spacer{
+  color: black;
+  opacity: 20%;
 }
