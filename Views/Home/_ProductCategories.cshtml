@@ -1,13 +1,22 @@
 ﻿@model List<ProductCategories>
 
-@foreach ( var item in Model )
-{
-    <div class="media-object grid-x">
-        <div class="media-object-section">
-            <img src="@item.ImagePath" alt="@item.ImageAlt">
-        </div>
-        <div class="media-object-section">
-        <p>@item.CategoryTitle</p>
-    </div>
-    </div>
-}
+<section class="product-categories-container ">
+    <h3 class="text-center">Product Categories</h3>
+    <ul class="product-slider">
+        @foreach ( var item in Model )
+        {
+            
+            <li class="product-category-item">
+                <div class="text-center">
+                    <img src="@item.ImagePath" alt="@item.ImageAlt">
+                </div>
+                <div class="product-category-text text-center">
+                    <p class="product-categories-item-title">@item.CategoryTitle</p>
+                </div>
+            </li>
+        }
+    </ul>
+
+</section>
+
+

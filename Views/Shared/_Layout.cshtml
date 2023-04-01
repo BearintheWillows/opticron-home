@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - optricon_home</title>
-    <link rel="stylesheet" href="~/css/foundation.css" asp-append-version="true" />
+       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+       <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+      <link rel="stylesheet" href="~/css/foundation.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/optricon_home.styles.css" asp-append-version="true" />
-     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
 </head>
 <body >
 <header >
@@ -48,13 +50,17 @@
 </div>
 
 <footer >
-Footer
+    Footer
 </footer>
+
 <script src="https://kit.fontawesome.com/a1e4791687.js" crossorigin="anonymous"></script>
 <script src="~/lib/jquery/dist/jquery.min.js"></script>
 <script src="~/js/vendor/foundation.min.js"></script>
 <script src="~/js/site.js" asp-append-version="true"></script>
-<script>$(document).foundation();</script>
+   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+<script>$(document).foundation();
+</script>
 
 @await RenderSectionAsync( "Scripts", required: false )
 

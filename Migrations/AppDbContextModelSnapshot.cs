@@ -144,6 +144,34 @@ namespace optricon_home.Migrations
                             CategoryTitle = "Observation & Marine",
                             ImageAlt = "Binocula 4",
                             ImagePath = "/images/Binocula_4.png"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CategoryTitle = "Binoculars",
+                            ImageAlt = "Binocula 1",
+                            ImagePath = "/images/Binocula_1.png"
+                        },
+                        new
+                        {
+                            Id = 6,
+                            CategoryTitle = "Compact Binoculars",
+                            ImageAlt = "Binocula 2",
+                            ImagePath = "/images/Binocula_2.png"
+                        },
+                        new
+                        {
+                            Id = 7,
+                            CategoryTitle = "Telescopes & Eyepieces",
+                            ImageAlt = "Binocula 3",
+                            ImagePath = "/images/Binocula_3.png"
+                        },
+                        new
+                        {
+                            Id = 8,
+                            CategoryTitle = "Observation & Marine",
+                            ImageAlt = "Binocula 4",
+                            ImagePath = "/images/Binocula_4.png"
                         });
                 });
 

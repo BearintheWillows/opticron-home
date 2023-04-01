@@ -103,7 +103,35 @@ public static class ModelBuilderExtentions
 			                      ImagePath = "/images/Binocula_4.png",
 			                      ImageAlt = "Binocula 4",
 			                      CategoryTitle = "Observation & Marine",
-			                      }
+			                      },
+		                      new
+		{
+			Id = 5,
+			ImagePath = "/images/Binocula_1.png",
+			ImageAlt = "Binocula 1",
+			CategoryTitle = "Binoculars",
+		},
+		new
+			{
+			Id = 6,
+			ImagePath = "/images/Binocula_2.png",
+			ImageAlt = "Binocula 2",
+			CategoryTitle = "Compact Binoculars",
+			},
+		new
+			{
+			Id = 7,
+			ImagePath = "/images/Binocula_3.png",
+			ImageAlt = "Binocula 3",
+			CategoryTitle = "Telescopes & Eyepieces",
+			},
+		new
+				{
+				Id = 8,
+				ImagePath = "/images/Binocula_4.png",
+				ImageAlt = "Binocula 4",
+				CategoryTitle = "Observation & Marine",
+				}
 		             );
 	}
 
