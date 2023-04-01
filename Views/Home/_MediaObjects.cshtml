@@ -5,16 +5,16 @@
 {
     <div class="cell mediaObject">
         <div class="expanded">
-            <h4 style="color: #a2a2a4;">@item.Title</h4>
+            <h4 style="color: #a2a2a4;" class="editable" contenteditable="true" id="mo.title-@item.Id">@item.Title</h4>
         </div>
         <div class="expanded">
             <img src="@item.ImagePath" alt="@item.ImageAlt">
         </div>
         <div class="expanded">
-            @item.Text
+            <p class="editable" contenteditable="true" id="mo.text-@item.Id">@item.Text</p>
         </div>
         <div class="expanded">
-            <button class="button">@item.ButtonText</button>
+            <button class="button"><p style="padding: 0; margin: 0;" class="editable" contenteditable="true" id="mo.buttonText-@item.Id">@item.ButtonText</p></button>
         </div>
     </div>
 }
