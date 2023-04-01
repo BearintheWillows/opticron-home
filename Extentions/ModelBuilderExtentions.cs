@@ -55,8 +55,8 @@ public static class ModelBuilderExtentions
 			                      Id = 1,
 			                      ImagePath = "/images/Money.png",
 			                      ImageAlt = "Money",
-			                      ItemTitle = "Discovery WP PC",
-			                      Text = "£20 Cashback"
+			                      ItemTitle = "Discovery WP PC", 
+			                      ItemText = "£20 Cashback"
 			                      },
 		                      new
 			                      {
@@ -64,7 +64,7 @@ public static class ModelBuilderExtentions
 			                      ImagePath = "/images/Olympus.png",
 			                      ImageAlt = "Olympus Camera",
 			                      ItemTitle = "HR ED Fieldscopes",
-			                      Text = "Free Digiscoping Kit",
+			                      ItemText = "Free Digiscoping Kit",
 			                      },
 		                      new
 			                      {
@@ -72,7 +72,7 @@ public static class ModelBuilderExtentions
 			                      ImagePath = "/images/Otricon_Cam.png",
 			                      ImageAlt = "Otricon Camera",
 			                      ItemTitle = "IS 60 WP FieldScope Kits",
-			                      Text = "Save 25%"
+			                      ItemText = "Save 25%"
 			                      }
 		             );
 		modelBuilder.Entity<ProductCategories>()

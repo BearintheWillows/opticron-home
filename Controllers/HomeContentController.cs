@@ -36,9 +36,15 @@ public class HomeContentController : Controller
 	}
 	
 	[HttpPut( "specialOffers/{id}" )]
-	public async Task<IActionResult> PutSpecialOffers([FromBody] SpecialOffers content)
+	public async Task<IActionResult> PutSpecialOffers([FromBody] SpecialOffersDto content)
 	{
-		if ( await _contentService.UpdateSpecialOffersAsync(content) )
+		Console.WriteLine(content.ItemText);
+		Console.WriteLine(content.ItemTitle);
+		var specialOffer = new SpecialOffers()
+			{
+				Id = content.Id ?? 0, ItemTitle = content.ItemTitle, ItemText = content.ItemText
+			};
+		if ( await _contentService.UpdateSpecialOffersAsync(specialOffer) )
 		{
 			return Ok();
 		}
@@ -49,9 +55,13 @@ public class HomeContentController : Controller
 	}
 	
 	[HttpPut( "productCategories/{id}" )]
-	public async Task<IActionResult> PutProductCategories([FromBody] ProductCategories content)
+	public async Task<IActionResult> PutProductCategories([FromBody] ProductCategoriesDTO content)
 	{
-		if ( await _contentService.UpdateProductCategoriesAsync(content) )
+		var productCategories = new ProductCategories()
+			{
+			Id = content.Id ?? 0, CategoryTitle = content.CategoryTitle
+			};
+		if ( await _contentService.UpdateProductCategoriesAsync(productCategories) )
 		{
 			return Ok();
 		}

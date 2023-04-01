@@ -21,15 +21,20 @@ editable.forEach((item) => {
         const pageAreaId = idParts[2];
         
         console.log(pageAreaType, pageAreaPart, pageAreaId);
-        
-        if (pageAreaType === 'mo'){
-            UpdateMediaObject(editedContent, pageAreaPart, pageAreaId);
-        }
+        switch (pageAreaType) {
+            case 'mo':
+                UpdateMediaObject(editedContent, pageAreaPart, pageAreaId);
+                break;
+            case 'pc':
+                UpdateProductCategories(editedContent, pageAreaPart, pageAreaId);
+                break;
+            case 'so':
+                UpdateSpecialOffers(editedContent, pageAreaPart, pageAreaId);
+                break;}
     })
 })
 
 function UpdateMediaObject(content, part, id) {
-    const xhr = new XMLHttpRequest();
     const url = `/api/homecontent/mediaobjects/${id}`;
     const params = {
         id: id,
@@ -38,12 +43,34 @@ function UpdateMediaObject(content, part, id) {
         buttonTest: part === 'buttonText' ? content : null,
     };
     
+    sendRequest(url, 'PUT', params);
+};
+
+function UpdateProductCategories(content, part, id) {
+    const url = `/api/homecontent/productcategories/${id}`;
+    const params = {
+        id: id,
+        categoryTitle : part === 'categoryTitle' ? content : null
+    };
     
-    console.log(params);
+    sendRequest(url, 'PUT', params);
+};
+
+function UpdateSpecialOffers(content, part, id) {
+    const url = `/api/homecontent/specialOffers/${id}`;
+    const params = {
+        id: id,
+        itemTitle : part === 'itemTitle' ? content : null,
+        itemText : part === 'itemText' ? content : null
+    };
     
-    xhr.open('PUT', url, true);
+    sendRequest(url, 'PUT', params);
+};
+        
+function sendRequest(url, method, params) {
+    const xhr = new XMLHttpRequest();
+    xhr.open(method, url, true);
     xhr.setRequestHeader('Content-type', 'application/json');
-    
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             console.log(xhr.responseText);
@@ -53,7 +80,7 @@ function UpdateMediaObject(content, part, id) {
     };
     console.log(JSON.stringify(params));
     xhr.send(JSON.stringify(params));
-};
+}
         
         
         

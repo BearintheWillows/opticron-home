@@ -1,0 +1,7 @@
+﻿namespace optricon_home.Models.DTOs;
+
+public class ProductCategoriesDTO
+{
+	public int?    Id    { get; set; }
+	public string? CategoryTitle { get; set; }
+}

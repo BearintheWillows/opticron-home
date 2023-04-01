@@ -3,5 +3,5 @@
 public class SpecialOffers : ContentItems
 {
 	public string ItemTitle { get; set; }
-	public string Text { get; set; }
+	public string ItemText { get; set; }
 }

@@ -49,17 +49,41 @@ public class ContentService : IContentService
 	
 	public async Task<bool> UpdateSpecialOffersAsync(SpecialOffers content)
 	{
-		_context.SpecialOffers.Update(content);
+		var specialOffer = await _context.SpecialOffers.FindAsync( content.Id );
 
-		await _context.SaveChangesAsync();
+		if ( content.ItemText != null )
+		{
+			specialOffer.ItemText = content.ItemText;
+		}
+		if ( content.ItemTitle != null )
+		{
+			specialOffer.ItemTitle = content.ItemTitle;
+		}
+
+		try
+		{
+			_context.SpecialOffers.Update(specialOffer);
+            		await _context.SaveChangesAsync();
+                    
+		}
+		catch ( Exception e )
+		{
+			Console.WriteLine( e );
+			throw;
+		}
+		
 		
 		return true;
 	}
 	
 	public async Task<bool> UpdateProductCategoriesAsync(ProductCategories content)
 	{
-		_context.ProductCategories.Update(content);
-
+		var productCategories = await _context.ProductCategories.FindAsync( content.Id );
+		if ( content.CategoryTitle != null )
+		{
+			productCategories.CategoryTitle = content.CategoryTitle;
+		}
+		_context.ProductCategories.Update(productCategories);
 		await _context.SaveChangesAsync();
 		
 		return true;
