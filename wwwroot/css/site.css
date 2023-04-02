@@ -21,7 +21,7 @@ html {
   min-height: 100%;
 }
 body {
-  background-color: #e6e7e8;
+  background-color: white;
 }
 
 /* Orbit Styles */
@@ -146,18 +146,16 @@ body {
 
 /* Product Categories */
 
-.product-categories-container{
-  padding: 5rem 0;
-}
+
 
 .product-categories-container h3{
   color: #8e8f92;
-  padding-bottom: 3rem;
+  padding-bottom: 2.5rem;
 }
 
 .product-category-text{
   color: #95979a;
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 .product-categories-list{
@@ -168,11 +166,13 @@ body {
 .product-slider{
   width:100%;
   margin:0px auto;
+  padding-bottom: 2.5rem;
 }
 .slick-slide{
   margin:2rem;
   position: relative;
 }
+
 
 .slick-slide img{
   width: 100%;
@@ -196,15 +196,20 @@ body {
   right: -80%;
 }
 
+.product-categories-container{
+    margin: 5rem 0;
+}
+
 .product-category-item{
-  height: 20rem;
+  height: 15rem;
 }
 
 .product-category-item p{
   position: absolute;
-  bottom: 0;
+  bottom: -2rem;
   left: 0.2rem;
   width: 100%;
+  
   
 }
 
@@ -216,8 +221,7 @@ footer{
 }
 
 footer .footer-content-container{
- padding: 3.5rem 21rem;
-  height: 100%;
+  height: 100%;                                                                                                                                                                                       
   
 }
 
@@ -234,13 +238,6 @@ footer .footer-content-container{
 
 .footer-content-container .footer-content-left a{
   font-size: 0.7rem;
-}
-
-.footer-content-container .footer-content-right{
-  display: flex;
-    flex-direction: column;
-  align-items: flex-end;
-  padding-right: 10rem;
 }
 
 .footer-content-container .footer-content-right .footer-email{
@@ -265,7 +262,7 @@ footer .footer-content-container{
 .footer-content-container .footer-content-right-bottom .footer-icons{
   font-size: 1.5rem;
   padding: 0.9rem 0.2rem;
-    color: #ffffff;
+  color: #ffffff;
 }
 
 .spacer{
@@ -274,16 +271,53 @@ footer .footer-content-container{
 }
 
 
-@media screen and (min-width: 1200px) {
-  .orbit-bullets {
-    right: 15rem!important;
-  }
-}
+
 
 @media screen and (min-width: 300px) {
   .orbit-bullets {
     right: 4rem;
   }
+  
+  footer{
+   font-size: 0.8rem;
+    padding: 2rem 3rem 3rem 2rem;
+    height: 20rem;
+  }
+  
+  .footer-content-right{
+    width: 400px!important;
+  }
+  
+  .footer-content-container .footer-content-left{
+    justify-content: flex-start;
+    padding-bottom: 1rem;
+  }
+
+  .footer-content-container .footer-content-right-top .footer-number {
+    font-size: 1.5rem;
+  } 
+ 
+  .footer-number{
+    letter-spacing: 5px;
+  }
+  
+  .breadcrumbs a{
+    font-size: 0.5rem!important;
+  }
+  
+
+    .footer-icons{
+        letter-spacing: 0.5rem;
+        
+    }
+    
+    .footer-icons i{
+      font-size: 1.2rem;
+    }
+  
+  
+}
+ 
 
   @media screen and (min-width: 768px) {
     .orbit-bullets {
@@ -293,12 +327,113 @@ footer .footer-content-container{
     .specialOfferButton{
       font-size: 2rem;
     }
+    
+    footer{
+      height: 25rem;
+      padding-right: 15rem;
+    }
+    
+    footer.footer-content-container{
+     width: 800px;
+      padding-left: 2rem;
+     
+    }
+    
+    .footer-content-right-top{
+      padding-top: 2rem;
+    }
+    
+    .footer-number{
+      letter-spacing: 11px;
+    }
+    
+   
+    
+    .footer-icons{
+      letter-spacing: 2rem;
+    }
+
+    footer{
+      font-size: 1.2rem;
+      width: 100%;
+      padding-left: 2%;
+      padding-right: 30%;
+    }
+    
+  
+
+    .breadcrumbs a{
+      font-size: 1rem!important;
+      padding: 0 -1.5px;
+    }
+ 
+  }
+
+@media screen and (min-width: 1200px) {
+  .orbit-bullets {
+    right: 15rem!important;
   }
   
+  footer{
+    height: 15rem;
+    padding-right: 25rem;
+    padding-left: 20rem;
+  }
+
+  .footer-content-container{
+    padding: 3rem 3rem;
+    width: 75rem;
+    padding: 0;
+  }
+  
+  .footer-content-right-top {
+    padding-right: 2.0rem;
+  }
+  
+  .footer-content-right-top .footer-number{
+    width: 25rem;
+  }
+  
+  .footer-content-left{
+    font-size: 1rem;
+  }
+  
+  .footer-content-right-bottom{
+    padding-right: 2.5rem;
+  }
+
+  .footer-content-container .footer-content-left{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    margin-right: 10rem;
+  }
+  
+  
+    
+    .footer-content-right .footer-number{
+      letter-spacing: 3px;
+    }
+
+
+  .footer-content-container .footer-content-right{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
+  .footer-content-container .footer-content-right-top .footer-number{
+    height: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 0;
+    color: #ffffff;
+  }
+
+}
+ 
   .special-offer-item {
     width: 95%;
     margin: 1.5rem auto;
     
   }
   
-}
