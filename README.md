@@ -1,4 +1,4 @@
-# Verto Test - Opticrom Homepage
+# Verto Test - Opticron Homepage
 
 ## Note Regarding CMS
 
