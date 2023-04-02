@@ -10,7 +10,10 @@ html {
   
 }
 
-
+.menu a{
+  color: #008542;
+  margin-right: 1rem;
+}
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
   box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
@@ -95,7 +98,12 @@ body {
 }
 
 
+
+
 /* Special Offers */
+.special-offers{
+ 
+}
 
 .special-offers h2{
   width: 100%;
@@ -188,6 +196,11 @@ body {
     right: 100%;
 }
 
+.slick-next img:hover{
+  cursor: pointer;
+  
+}
+
 .slick-prev img{
   width: 4rem;
   height: 2.5rem;
@@ -277,6 +290,23 @@ footer .footer-content-container{
   .orbit-bullets {
     right: 4rem;
   }
+  header{
+    width: 100vw;
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+
+  .mainContent{
+    width: 100%;
+    padding-left: 0!important;
+    padding-right: 0!important;
+  }
+  
+ .top-bar-right ul {
+   margin-left: 0;
+ }
+ 
+ 
   
   footer{
    font-size: 0.8rem;
@@ -322,6 +352,18 @@ footer .footer-content-container{
   @media screen and (min-width: 768px) {
     .orbit-bullets {
       right: 8rem;
+    }
+    
+    header{
+      width: 100vw;
+      padding-left: 0!important;
+      padding-right: 0!important;
+    }
+    
+    .mainContent{
+      width: 100%;
+      padding-left: 0!important;
+      padding-right: 0!important;
     }
     
     .specialOfferButton{
@@ -428,6 +470,8 @@ footer .footer-content-container{
     margin-bottom: 0;
     color: #ffffff;
   }
+  
+ 
 
 }
  

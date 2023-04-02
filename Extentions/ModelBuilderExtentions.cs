@@ -42,7 +42,7 @@ public static class ModelBuilderExtentions
 			                      {
 			                      Id = 4,
 			                      Title = "Gallery",
-			                      ImagePath = "/images/Bird.png",
+			                      ImagePath = "/images/BirdOnTree.png",
 			                      ImageAlt = "Bird in tree",
 			                      Text =
 				                      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, nunc ut aliquam aliquam, nunc nisl aliquet nisl, eget aliquam nisl nisl sit amet lorem.",

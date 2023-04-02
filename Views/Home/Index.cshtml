@@ -7,7 +7,7 @@
 
 
 @await Html.PartialAsync( "_Orbit" )
-<section class="mainContent grid-container" style="background-color: white">
+<section class="mainContent grid-container small-up-full medium-up-full" style="background-color: white">
     @await Html.PartialAsync( "_MediaObjects", Model.MediaObjectsList )
     @await Html.PartialAsync( "_SpecialOffers", Model.SpecialOffersList)
     @await Html.PartialAsync( "_ProductCategories", Model.ProductCategoriesList )

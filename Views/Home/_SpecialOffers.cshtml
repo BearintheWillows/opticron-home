@@ -2,7 +2,7 @@
 
 <section class="special-offers" style="background-color: #e6e7e8;">
 
-    <h2 class="text-center">Special Offers</h2>
+    <h2 class="text-center" style="color: #838487; padding-bottom: 2rem;">Special Offers</h2>
     <ul class="grid-x grid-padding-x text-center large-up-3 special-offer-item-container">
         @foreach ( var item in Model )
         {
@@ -11,8 +11,8 @@
                     <img src="@item.ImagePath" alt="@item.ImageAlt">
                 </div>
                 <div class="expanded special-offer-text">
-                    <p class="text-title editable" contenteditable="true" id="so.itemTitle-@item.Id">@item.ItemTitle</p>
-                    <p class="text-offer editable" contenteditable="true" id="so.itemText-@item.Id">@item.ItemText</p>
+                    <p class="text-title editable" contenteditable="true" style="color: #5a5a5b" id="so.itemTitle-@item.Id">@item.ItemTitle</p>
+                    <p class="text-offer editable" contenteditable="true" style="color: #5a5a5b" id="so.itemText-@item.Id">@item.ItemText</p>
                 </div>
             </li>
         }
