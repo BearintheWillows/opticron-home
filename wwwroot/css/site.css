@@ -65,10 +65,7 @@ body {
   background: #258cfb;
 }
 
-header{
-  width: 1280px; 
-  margin: 0 auto;
-}
+
 
 .orbit {
  width: 100%;
@@ -83,10 +80,6 @@ height: 350px;
 }
 
 /* Main Section */
-
-.mainContent{
-  width: 1280px;
-}
 
 /* Media Objects */
 
